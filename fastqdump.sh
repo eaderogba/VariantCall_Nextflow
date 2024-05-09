@@ -1,0 +1,1 @@
+for i in $(cat samples.txt);do fastq-dump --split-files $i;done
