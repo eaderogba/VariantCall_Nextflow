@@ -93,7 +93,7 @@ process MAPPING {
 
     script:
     """
-    bwa mem -t "${task.cpus}" ${index_dir}/${reference_file} ${reads} | samtools view -bS - > ${sample_id.}.bam
+    bwa mem "${task.cpus}" ${index_dir}/${reference_file} ${reads} | samtools view -bS - > ${sample_id.}.bam
     """
 }
 

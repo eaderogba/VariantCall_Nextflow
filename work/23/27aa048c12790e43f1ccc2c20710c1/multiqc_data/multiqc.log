@@ -1,0 +1,24 @@
+[2024-05-11 16:18:28,872] multiqc                                            [DEBUG  ]  This is MultiQC v1.21
+[2024-05-11 16:18:28,873] multiqc                                            [DEBUG  ]  Command used: /home/eaderogba279/anaconda3/bin/multiqc .
+[2024-05-11 16:18:34,483] multiqc                                            [DEBUG  ]  Latest MultiQC version is v1.21, released 2024-02-28
+[2024-05-11 16:18:34,483] multiqc                                            [DEBUG  ]  Working dir : /home/eaderogba279/Bionformatics_Projects/VariantCall_Nextflow/work/23/27aa048c12790e43f1ccc2c20710c1
+[2024-05-11 16:18:34,483] multiqc                                            [DEBUG  ]  Template    : default
+[2024-05-11 16:18:34,483] multiqc                                            [DEBUG  ]  Running Python 3.11.5 (main, Sep 11 2023, 13:23:44) [GCC 11.2.0]
+[2024-05-11 16:18:34,484] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, ccs, ngsderive, purple, conpair, isoseq, lima, peddy, somalier, methylqa, mosdepth, phantompeakqualtools, qualimap, bamdst, preseq, hifiasm, quast, qorts, rna_seqc, rockhopper, rsem, rseqc, busco, bustools, goleft_indexcov, gffcompare, disambiguate, supernova, deeptools, sargasso, verifybamid, mirtrace, happy, mirtop, sambamba, gopeaks, homer, hops, macs2, theta2, snpeff, gatk, htseq, bcftools, featureCounts, fgbio, dragen, dragen_fastqc, dedup, pbmarkdup, damageprofiler, mapdamage, biobambam2, jcvi, mtnucratio, picard, vep, bakta, prokka, qc3C, nanostat, samblaster, samtools, sexdeterrmine, seqera_cli, eigenstratdatabasetools, bamtools, jellyfish, vcftools, longranger, stacks, varscan2, snippy, umitools, truvari, megahit, bbmap, bismark, biscuit, diamond, hicexplorer, hicup, hicpro, salmon, kallisto, slamdunk, star, hisat2, tophat, bowtie2, bowtie1, cellranger, snpsplit, odgi, pangolin, nextclade, freyja, humid, kat, leehom, librarian, nonpareil, adapterRemoval, bbduk, clipandmerge, cutadapt, flexbar, sourmash, kaiju, bracken, kraken, malt, motus, trimmomatic, sickle, skewer, sortmerna, biobloomtools, fastq_screen, afterqc, fastp, fastqc, filtlong, prinseqplusplus, pychopper, porechop, pycoqc, minionqc, anglerfish, multivcfanalyzer, clusterflow, checkqc, bcl2fastq, bclconvert, interop, ivar, flash, seqyclean, optitype, whatshap, spaceranger, xenome, xengsort, metaphlan, seqwho
+[2024-05-11 16:18:34,484] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /tmp/tmpeh_uguqg
+[2024-05-11 16:18:34,485] multiqc                                            [INFO   ]  Search path : /home/eaderogba279/Bionformatics_Projects/VariantCall_Nextflow/work/23/27aa048c12790e43f1ccc2c20710c1
+[2024-05-11 16:18:34,770] multiqc                                            [DEBUG  ]  Summary of files that were skipped by the search: [skipped_module_specific_max_filesize: 133] // [skipped_no_match: 16]
+[2024-05-11 16:18:34,792] multiqc                                            [DEBUG  ]  No samples found: custom_content
+[2024-05-11 16:18:34,834] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 10 reports
+[2024-05-11 16:18:34,834] multiqc.utils.util_functions                       [DEBUG  ]  Wrote data file multiqc_fastqc.txt
+[2024-05-11 16:18:34,943] multiqc.plots.plotly.heatmap                       [DEBUG  ]  Heatmap size: 450x450, px per element: 45.00x45.00
+[2024-05-11 16:18:34,949] multiqc.utils.software_versions                    [DEBUG  ]  Reading software versions from config.software_versions
+[2024-05-11 16:18:34,950] multiqc.utils.util_functions                       [DEBUG  ]  Wrote data file multiqc_software_versions.txt
+[2024-05-11 16:18:34,966] multiqc.utils.util_functions                       [DEBUG  ]  Wrote data file multiqc_general_stats.txt
+[2024-05-11 16:18:34,966] multiqc                                            [DEBUG  ]  Compressing plot data
+[2024-05-11 16:18:35,100] multiqc.utils.util_functions                       [DEBUG  ]  Wrote data file multiqc_data.json
+[2024-05-11 16:18:35,101] multiqc                                            [INFO   ]  Report      : multiqc_report.html
+[2024-05-11 16:18:35,101] multiqc                                            [INFO   ]  Data        : multiqc_data
+[2024-05-11 16:18:35,101] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmpeh_uguqg/multiqc_data' to '/home/eaderogba279/Bionformatics_Projects/VariantCall_Nextflow/work/23/27aa048c12790e43f1ccc2c20710c1/multiqc_data'
+[2024-05-11 16:18:35,104] multiqc                                            [DEBUG  ]  Full report path: /home/eaderogba279/Bionformatics_Projects/VariantCall_Nextflow/work/23/27aa048c12790e43f1ccc2c20710c1/multiqc_report.html
+[2024-05-11 16:18:35,257] multiqc                                            [INFO   ]  MultiQC complete
