@@ -1,0 +1,9 @@
+
+  /// MultiQC 🔍 | v1.21
+
+|           multiqc | Search path : /home/eaderogba279/Bionformatics_Projects/VariantCall_Nextflow/work/16/48fde8cbb60bf5cf336845f096ce6a
+|         searching | ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 26/26  
+|            fastqc | Found 10 reports
+|           multiqc | Report      : multiqc_report.html
+|           multiqc | Data        : multiqc_data
+|           multiqc | MultiQC complete

@@ -507,3 +507,32 @@
 2024-05-11 17:49:10	1.9s	peaceful_lamarr	ERR	0330b25e1b0ba9cb7b358a9911531b02	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile conda -resume
 2024-05-11 17:49:27	1.8s	grave_lamport	ERR	341d43d1af6d12852fc2cabc92f2c742	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile conda -resume
 2024-05-11 17:49:56	1m 55s	elegant_gutenberg	OK	58a2dd3e38aa6d26cb6e0e544383d089	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile conda -resume
+2024-05-11 20:28:02	2m 8s	reverent_snyder	OK	ed41ce354f9d2481ece27a32e6260a0f	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile conda -resume
+2024-05-11 20:30:52	15.3s	boring_tesla	ERR	06cde125a85a70070c2ad8db43432754	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile conda -resume
+2024-05-11 20:31:44	14.3s	mad_lattes	ERR	06cde125a85a70070c2ad8db43432754	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile conda -resume
+2024-05-11 20:32:57	13.7s	prickly_ptolemy	ERR	06cde125a85a70070c2ad8db43432754	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile conda -resume
+2024-05-11 20:34:01	2.5s	friendly_curran	OK	2e307203530d68b803dd5682a8bfdd7c	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile conda -resume
+2024-05-11 20:36:44	13s	ecstatic_chandrasekhar	ERR	4b054cb7a5f0a1de544cb839c84c6034	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile conda -resume
+2024-05-11 20:37:18	13.5s	festering_goldstine	ERR	4b054cb7a5f0a1de544cb839c84c6034	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile conda -resume
+2024-05-11 20:38:46	2.6s	berserk_moriondo	OK	2e307203530d68b803dd5682a8bfdd7c	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile conda -resume
+2024-05-11 20:44:15	2.6s	irreverent_gautier	OK	0523e24779f8717f214f42d7b8cd44b0	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile conda -resume
+2024-05-11 20:51:22	2.5s	modest_boyd	OK	b7f21df3dfd7ffecdf3a369164ba7e47	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile conda -resume
+2024-05-11 21:00:20	-	gloomy_stallman	-	d016050cc3daa41cc04fdd97faa9554b	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile conda -resume
+2024-05-11 21:03:41	2m 13s	insane_kalman	OK	5e5716547615ecebb2916d631c454ba1	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile conda -resume
+2024-05-11 21:09:17	16.8s	pensive_solvay	ERR	e39afb1c3677020d71363654d83ada0a	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile conda -resume
+2024-05-11 21:11:27	14s	grave_mclean	ERR	6f008abaef1d39f9b0cba57f5732abfc	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile conda -resume
+2024-05-11 21:12:57	13.8s	sad_nobel	ERR	3b24e32d48ba83522442236ff805b200	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile conda -resume
+2024-05-11 21:13:31	13.2s	elegant_poitras	ERR	bb6e7a45f6804e3ef9d5aafbf7f32610	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile conda -resume
+2024-05-11 21:14:09	13.5s	small_dubinsky	ERR	6a395a8767edb2de250c08e1b9970571	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile conda -resume
+2024-05-11 21:14:49	14.4s	pensive_leavitt	ERR	487a531bcc476f8097b5abdae487cec7	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile conda -resume
+2024-05-11 21:15:36	13.4s	lonely_stallman	ERR	838ae701db6640436e32d76cb9ccf7c7	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile conda -resume
+2024-05-11 21:18:40	2.1s	golden_legentil	OK	5e5716547615ecebb2916d631c454ba1	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile conda -resume
+2024-05-11 21:22:59	13.5s	friendly_goldwasser	ERR	c8b44c2ec2e26b2819775e550183874a	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile conda -resume
+2024-05-11 21:45:37	2.8s	sharp_ramanujan	OK	5e5716547615ecebb2916d631c454ba1	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile conda -resume
+2024-05-11 21:50:55	2m 6s	magical_yonath	OK	7f24236b64ebe4ca4ae5e2ef58bfdf34	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile conda -resume
+2024-05-11 21:57:47	2.1s	suspicious_archimedes	OK	7f24236b64ebe4ca4ae5e2ef58bfdf34	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile docker -resume
+2024-05-11 22:01:39	2s	high_northcutt	OK	7f24236b64ebe4ca4ae5e2ef58bfdf34	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile docker -resume
+2024-05-11 22:12:39	2.6s	ecstatic_borg	OK	7f24236b64ebe4ca4ae5e2ef58bfdf34	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile docker -resume
+2024-05-11 22:13:18	3s	evil_albattani	OK	7f24236b64ebe4ca4ae5e2ef58bfdf34	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile docker -resume
+2024-05-11 22:13:54	3.3s	nice_poincare	OK	7f24236b64ebe4ca4ae5e2ef58bfdf34	ff24631b-0633-4e03-8095-5ccbe2d4e0e8	nextflow run scriptnew.nf -profile docker -resume
+2024-05-11 22:16:46	4m 11s	insane_hodgkin	OK	7f24236b64ebe4ca4ae5e2ef58bfdf34	c3036712-d2ab-4c53-815d-a25a96e69653	nextflow run scriptnew.nf -profile docker

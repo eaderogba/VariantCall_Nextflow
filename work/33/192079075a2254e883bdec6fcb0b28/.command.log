@@ -1,0 +1,17 @@
+Looking to launch executable "/home/eaderogba279/anaconda3/bin/bwa-mem2.avx2", simd = .avx2
+Launching executable "/home/eaderogba279/anaconda3/bin/bwa-mem2.avx2"
+[bwa_index] Pack FASTA... ref_seq_len = 59806
+count = 0, 18548, 29903, 41258, 59806
+BWT[17048] = 4
+CP_SHIFT = 6, CP_MASK = 63
+sizeof CP_OCC = 64
+max_occ_ind = 934
+0.00 sec
+* Entering FMI_search
+init ticks = 4254753
+ref seq len = 59806
+binary seq ticks = 1988215
+build suffix-array ticks = 12619116
+pos: 7476, ref_seq_len__: 7475
+build fm-index ticks = 4287011
+Total time taken: 0.0149

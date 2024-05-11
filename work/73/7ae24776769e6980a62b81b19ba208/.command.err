@@ -1,3 +1,0 @@
-[E::hts_hopen] Failed to open file sorted
-[E::hts_open_format] Failed to open file "sorted" : Is a directory
-ERROR(freebayes): Could not open input BAM file: sorted

@@ -1,49 +1,33 @@
-nextflow.enable.dsl = 2
-
-/*
-* Parameters Definition
-*/
-
+params.genome = "$baseDir/reference/MN908947.fasta"
+params.index_dir = "$baseDir/index_dir"
 params.reads = "$baseDir/data/*_{1,2}.fastq"
-params.reference_file = "$baseDir/data/MN908947.fasta"
-params.multiqc = "$baseDir/multiqc"
-params.index_dir = "$baseDir/ref"
-params.outdir = "results"
+params.qc_report = "$baseDir/fastqc_report"
+params.multiqc_report = "$baseDir/multiqc_report"
+params.sorted_bam = "$baseDir/results/mapped/sorted/"
+params.variant_call = "$baseDir/results/variant_call/"
 
-log.info """\
-        V A R C A L L - N F  P I P E L I N E
-        ===================================
-        Adapted by Adebowale
-        ===================================
-        reference    : ${params.reference_file}
-        reads        : ${params.reads}
-        outdir       : ${params.outdir}
-        """
-        .stripIndent(true)
-
-// INDEXING
-
+// Reference Genome Indexing using BWA
 process BWA_INDEX {
+
+    publishDir("${params.index_dir}"), mode: 'copy'
+
     input:
     path genome
 
     output:
-    path genome
+    path "*"
 
     script:
     """
-    bwa index ${genome}
+    bwa-mem2 index $genome
     """
 }
 
-/*
-Quality Control
-*/
+// Run Quality Control using FastQC
 process FASTQC {
-    cpus 4
+    publishDir("${params.qc_report}", mode: 'copy')
 
     tag "FASTQC on $sample_id"
-    publishDir params.outdir
 
     input:
     tuple val(sample_id), path(reads)
@@ -54,15 +38,12 @@ process FASTQC {
     script:
     """
     mkdir fastqc_${sample_id}_logs
-    fastqc -t ${task.cpus} -o fastqc_${sample_id}_logs -f fastq -q ${reads}
+    fastqc -o fastqc_${sample_id}_logs -f fastq -q ${reads}
     """
 }
 
-// MULTIQC
 process MULTIQC {
-    cpus 4
-
-    publishDir params.outdir, mode:'copy'
+    publishDir ("${params.multiqc_report}", mode: 'copy')
     
     input:
     path '*'
@@ -76,37 +57,66 @@ process MULTIQC {
     """
 }
 
-// MAPPING
+// Mapping and Sorting using BWA and SAMTOOLS
 process MAPPING {
-    conda 'bwa samtools'
-    cpus 4
-    publishDir 'results/mapped', mode: 'copy'
+    publishDir ("${params.sorted_bam}"), mode: 'copy'
+
+    tag "MAPPING on $sample_id"
 
     input:
-    path index_dir
-    val reference_file
     tuple val(sample_id), path(reads)
-    //path(reference_file)
+    val genome
+    val index_dir
 
     output:
-    path "*"
+    tuple val(sample_id), path("${sample_id}.sorted.bam")
 
     script:
     """
-    bwa mem "${task.cpus}" ${index_dir}/${reference_file} ${reads} | samtools view -bS - > ${sample_id.}.bam
+    bwa-mem2 mem -t ${task.cpus} ${genome} ${reads} | samtools sort -@ 20 -o ${sample_id}.sorted.bam - && samtools index ${sample_id}.sorted.bam
+    """
+}
+
+// FREEBAYES FOR VARIANT CALLING
+process FREEBAYES_VARIANT_CALLING {
+    publishDir "${params.variant_call}", mode: 'copy'
+
+    input:
+    val genome
+    tuple val(sample_id), path(sorted_bam)
+
+    output:
+    path "${sample_id}.vcf.gz", emit: vcf
+    path "${sample_id}.vcf.gz.tbi", emit: vcf_index
+    path "${sample_id}.tsv", emit: tsv
+    path "${sample_id}_stats.txt", emit: vcf_txt
+
+
+    script:
+    """
+    freebayes -f ${genome} ${sorted_bam} | bgzip -c > ${sample_id}.vcf.gz && tabix -p vcf ${sample_id}.vcf.gz && bcftools query -H -f '%CHROM\t%POS\t%ID\t%REF\t%ALT[\t%GT]\n' ${sample_id}.vcf.gz > ${sample_id}.tsv && bcftools stats ${sample_id}.vcf.gz > ${sample_id}_stats.txt
     """
 }
 
 workflow {
-    // Channel declaration
-    Channel
-        .fromFilePairs(params.reads, checkIfExists: true)
-        .set {reads_pairs_ch}
-    //
-    index_ch = BWA_INDEX(params.index_dir)
-    fastqc_ch = FASTQC(reads_pairs_ch)
-    multiqc_ch = MULTIQC(fastqc_ch.collect())
-    mapping_ch = MAPPING(index_ch, ref_ch, reads_pairs_ch)
+    // Channel Declarations
+    index_ch = Channel.fromPath(params.index_dir).first()
+    genome_ch = Channel.fromPath(params.genome, checkIfExists: true).first()
+    reads_pairs_ch = Channel.fromFilePairs(params.reads, checkIfExists: true)
+    sorted_bam_ch = Channel.fromPath(params.sorted_bam).first()
 
-    BWA_INDEX.out.view()
+    // Index the reference genome
+    BWA_INDEX(genome_ch)
+
+    // Run FastQC on reads
+    fastqc_ch = FASTQC(reads_pairs_ch)
+
+    // Aggregate FastQC results using MULTIQC
+    MULTIQC(fastqc_ch.collect())
+
+    // Perform mapping using MAPPING process
+    mapping = MAPPING(reads_pairs_ch, genome_ch, index_ch.collect())
+
+    // Perform variant calling
+    FREEBAYES_VARIANT_CALLING(genome_ch, mapping)
 }
