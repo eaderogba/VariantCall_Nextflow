@@ -3,8 +3,6 @@
 ## Overview
 
 ### SARS-CoV-2 WGS Analysis using nextflow
-This project showcases a comprehensive genome analysis pipeline (written in nextflow) using various bioinformatics tool.
-
 This repository contains the workflow for the whole-genome sequencing (WGS) analysis of SARS-CoV-2 using a pipeline written in nextflow. The analysis is based on a benchmark dataset, which includes 16 samples from CDC-defined Variants of Interest/Variants of Concern (VOI/VOC) lineages.
 
 ### Dataset Description
@@ -13,9 +11,7 @@ The dataset is a validated lineage-calling benchmark set, designed for the study
 ### Reference Sequence
 The analysis utilizes the Wuhan-1 reference sequence (MN908947.fa) for mapping the sequence data.
 
-
 The pipeline includes steps for reference genome indexing, quality control, mapping, and variant calling.
-
 
 #### Reference Genome Indexing
 The reference genome is indexed using BWA-MEM2
