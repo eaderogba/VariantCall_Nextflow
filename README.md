@@ -32,3 +32,12 @@ MultiQC
 SAMtools
 FreeBayes
 Nextflow
+
+### Profiles
+This pipeline can be executed in different environments using either Conda or Docker. The configuration is specified in the nextflow.config file.
+
+Conda Profile
+To use the Conda profile, ensure you have Conda installed. The required dependencies will be managed automatically.
+
+Docker Profile
+To use the Docker profile, ensure you have Docker installed. The required Docker images will be pulled and used for each process.
